@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f3eb;
+            font-family: Georgia, "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+            color: #2c2a28;
+            line-height: 1.7;
+            padding: 2.5rem 1.2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            max-width: 860px;
+            width: 100%;
+            background: #fcfaf7;
+            padding: 2.8rem 2.2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-left: 5px solid #c9a96e;
+            padding-left: 1.1rem;
+            margin-bottom: 1.4rem;
+            color: #3c352d;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7a6e62;
+            margin-top: -0.6rem;
+            margin-bottom: 2.2rem;
+            padding-left: 1.7rem;
+            font-style: italic;
+            border-bottom: 1px dashed #ddd6cb;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 2.2rem 0 0.8rem 0;
+            color: #4f463c;
+            border-bottom: 1px solid #e5ddd2;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 1.5rem 0 0.5rem 0;
+            color: #5e5246;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-indent: 2em;
+        }
+
+        a {
+            color: #8a6f4b;
+            text-decoration: none;
+            border-bottom: 1px solid #d4c4ae;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #5a4230;
+            border-bottom-color: #8a6f4b;
+        }
+
+        .highlight-link {
+            font-weight: 500;
+        }
+
+        .info-card {
+            background: #f4efe8;
+            border-left: 4px solid #c9a96e;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .info-card p {
+            text-indent: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tip-box {
+            background: #ece6db;
+            border-radius: 10px;
+            padding: 1rem 1.4rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            color: #3f3a33;
+        }
+
+        .tip-box p {
+            text-indent: 0;
+            margin-bottom: 0.3rem;
+        }
+
+        .directory-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.8rem 0;
+        }
+
+        .dir-item {
+            background: #f8f4ed;
+            padding: 1rem 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #e5dcd0;
+            transition: background 0.2s;
+        }
+
+        .dir-item:hover {
+            background: #f1eae0;
+        }
+
+        .dir-item strong {
+            display: block;
+            font-weight: 600;
+            color: #4f463c;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .dir-item span {
+            font-size: 0.9rem;
+            color: #6f655a;
+        }
+
+        .faq-mini {
+            margin: 1.8rem 0;
+            padding: 1.2rem 1.5rem;
+            background: #faf6f0;
+            border-radius: 12px;
+            border: 1px solid #e2d9cd;
+        }
+
+        .faq-mini dt {
+            font-weight: 500;
+            margin-top: 0.8rem;
+            color: #4f463c;
+        }
+
+        .faq-mini dt:first-of-type {
+            margin-top: 0;
+        }
+
+        .faq-mini dd {
+            margin-left: 1.2rem;
+            margin-bottom: 0.6rem;
+            color: #4d443b;
+            font-size: 0.95rem;
+        }
+
+        .signature-line {
+            margin-top: 2.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #ddd6cb;
+            font-size: 0.9rem;
+            color: #8a7f73;
+            text-align: right;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+
+            .page {
+                padding: 1.8rem 1.2rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                padding-left: 0.8rem;
+            }
+
+            .subhead {
+                font-size: 0.9rem;
+                padding-left: 1rem;
+                padding-bottom: 0.7rem;
+            }
+
+            .directory-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .info-card {
+                padding: 1rem;
+            }
+
+            .faq-mini {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>爱游戏 · 知识库入口</h1>
+        <div class="subhead">持续关注，随时回访 —— 一份整理好的导航说明</div>
+
+        <p>
+            如果你曾经访问过 <a href="https://web-tv-igame.com" class="highlight-link">爱游戏</a>，或是最近刚刚了解到它，这个页面可以当作一个安静的整理站。这里没有浮夸的引导，只有一些关于再次访问、收藏以及持续关注的实际提示，方便你以后需要时能找到方向。
+        </p>
+
+        <div class="info-card">
+            <p><strong>📌 再次访问提醒</strong></p>
+            <p>网站 <a href="https://web-tv-igame.com">爱游戏</a> 的内容会不定期更新，如果你隔了一段时间没有回来，可能会发现界面或者栏目有所调整。建议在浏览器中添加书签，或者记住以下目录结构，下次回来时能更快定位。</p>
+        </div>
+
+        <h2>📂 常用目录概览</h2>
+        <p>以下是根据网站常见功能归纳的几个区域，方便你对照回忆或快速跳转。每个板块的具体内容以实际页面为准，这里只作示意性整理。</p>
+
+        <div class="directory-grid">
+            <div class="dir-item">
+                <strong>首页 · 动态</strong>
+                <span>近期推荐、更新摘要、活动预告</span>
+            </div>
+            <div class="dir-item">
+                <strong>分类 · 探索</strong>
+                <span>按类型或主题浏览，发现感兴趣的内容</span>
+            </div>
+            <div class="dir-item">
+                <strong>专题 · 合集</strong>
+                <span>策划的系列内容，适合深度阅读或回顾</span>
+            </div>
+            <div class="dir-item">
+                <strong>个人 · 记录</strong>
+                <span>收藏历史、偏好设置、浏览足迹</span>
+            </div>
+        </div>
+
+        <p>
+            以上分类并非正式导航，只是根据经验整理出的常见区域。如果你找不到某个具体功能，可以先从首页的搜索或菜单栏入手。记住，域名为 <a href="https://web-tv-igame.com">爱游戏</a> 的唯一地址，不要混淆相似名称的站点。
+        </p>
+
+        <h2>💡 收藏与持续关注</h2>
+        <p>
+            如果你希望长期追踪 <a href="https://web-tv-igame.com">爱游戏</a> 的变化，除了添加书签之外，还可以关注站内的“更新日志”或“公告”板块（通常位于页面底部或顶部导航）。有些重要的调整会以公告形式呈现，偶尔查看能避免遗漏。
+        </p>
+
+        <div class="tip-box">
+            <p><strong>✏️ 实用提示</strong></p>
+            <p>· 建议定期清理浏览器缓存，避免旧版本样式干扰显示。</p>
+            <p>· 如果遇到页面加载异常，可以先检查网络连接，或稍后再试。</p>
+            <p>· 网站没有强制推送通知，需要你自己主动回访或订阅（若有相关功能）。</p>
+        </div>
+
+        <h2>❓ 常见疑问摘要</h2>
+        <div class="faq-mini">
+            <dl>
+                <dt>Q：我忘记了之前看到的某个内容在哪里找？</dt>
+                <dd>A：可以先浏览分类导航，或者使用站内关键词搜索。如果仍找不到，可以查看“历史浏览”或个人收藏记录（需登录）。</dd>
+
+                <dt>Q：网站会频繁改版吗？</dt>
+                <dd>A：没有固定频率，但通常以优化体验为主。改版后一般会保留主要结构，旧链接可能自动跳转或显示提示。</dd>
+
+                <dt>Q：我收藏了网页，但下次打开变了样？</dt>
+                <dd>A：可能是样式更新导致，功能核心一般不变。如果布局变化较大，可以刷新页面或清除缓存后重试。</dd>
+            </dl>
+        </div>
+
+        <h2>🔗 相关信息区</h2>
+        <p>
+            如果你正在寻找关于 <a href="https://web-tv-igame.com">爱游戏</a> 的背景说明、使用指引或常见术语解释，建议优先查看站内的“关于”页面或帮助文档（通常位于页脚）。第三方介绍不保证准确，以网站自身信息为准。
+        </p>
+        <p>
+            另外，保持对 <a href="https://web-tv-igame.com">爱游戏</a> 的关注并不意味着需要每天访问。你可以根据自己的节奏，隔一段时间回来看看，这样既能感受到变化，又不会造成信息过载。
+        </p>
+
+        <div class="signature-line">
+            — 整理于知识库入口 · 2025
+        </div>
+    </div>
+</body>
+</html>
